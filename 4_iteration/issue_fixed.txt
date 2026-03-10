@@ -1,0 +1,25 @@
+Online Q-learning without
+replay buffer
+target network
+causes the policy to collapse to random actions
+
+So in this iteration added
+Experience replay:
+    Instead of training on the latest transition:
+    (state, action, reward, next_state)
+    store many transitions and train on batches
+
+Normalization
+
+Average Reward Over Channels:
+    We should use ergodic rate by averaging over many channel realizations.
+    current env uses 1 realization per step
+        for i in range(10):
+            generate channel
+            compute R1,R2
+        average reward
+
+
+Add replay buffer
+Add target network
+Average rewards across channels

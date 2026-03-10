@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Logs and outputs
+*.log
+*.out
+*.tmp
+
+# Jupyter / notebooks
+.ipynb_checkpoints/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Cursor project metadata
+.cursor/
+
+# Python cache for RIS project
+**/__pycache__/
+
