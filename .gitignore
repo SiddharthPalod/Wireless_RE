@@ -17,6 +17,7 @@ dist/
 *.log
 *.out
 *.tmp
+*.npy
 
 # Jupyter / notebooks
 .ipynb_checkpoints/

@@ -1,0 +1,13 @@
+U1 uses Active RIS elements
+U2 uses Passive RIS elements
+
+Because active elements are stronger
+U1 gets much stronger per-element gain
+To balance fairness, we need more active elements.
+So optimal partition shifts toward U1.
+
+That’s why optimum is:
+N1 ≈ 85
+N2 ≈ 43
+instead of:
+64 / 64

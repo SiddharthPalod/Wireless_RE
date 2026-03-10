@@ -7,6 +7,38 @@ The environment is intentionally simplified so that the **DRL pipeline (state â†
 
 ---
 
+## How to run and visualize
+
+From the `Wireless` folder:
+
+- **Train the agent and generate logs**
+
+```bash
+python main.py
+```
+
+This runs the DQN loop and writes:
+
+- `training_rewards.npy`
+- `training_losses.npy`
+- `training_actions.npy`
+
+to the current directory.
+
+- **Visualize training curves**
+
+```bash
+python visual.py
+```
+
+This will open a Matplotlib window showing:
+
+- reward vs. step (with moving average),
+- loss vs. step,
+- chosen action vs. step (RIS partition index).
+
+---
+
 # Initial setup (as it originally was)
 
 - **Files**

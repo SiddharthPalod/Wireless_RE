@@ -1,0 +1,46 @@
+In Figure 1:
+moving average gradually increasing
+stabilizing near ~0.9–1.0
+- The agent does find high-reward partitions frequently
+- It has not converged to a stable policy
+Reason: Env is very stochastic (Rayleigh fading every step).
+So the agent keeps receiving different rewards for the same action
+
+In Figure 2: 
+A large spike around step ~19k
+then loss collapses toward near zero
+
+Possible reasons:
+- network experienced large TD error
+- weights adjusted heavily
+- policy stabilized afterwards
+Or
+- learning rate too high
+- reward variance too high
+- Q-values exploding
+
+In Figure 3
+Actions almost uniformly distributed from 0–100
+    The policy has not converged
+Trained policy will Cluster around the optimal partition.
+Plot seems to be in exploratory stage
+
+5_Iteration:
+1️ Average reward over 10 channels
+2️ Lower learning rate
+3️ Gradient clipping
+
+Verify ECE model is correct:
+rewards = []
+
+for N1 in range(0,128):
+    r = []
+    for i in range(50):
+        ch = generate_rayleigh_channels(...)
+        sinr1, sinr2 = compute_sinr(...)
+        R1,R2 = compute_rates(...)
+        r.append(fairness(R1,R2))
+    rewards.append(np.mean(r))
+
+plt.plot(rewards)
+
